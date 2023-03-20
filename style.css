@@ -1,0 +1,110 @@
+:root {
+    --backdrop:rgba(61, 131, 191, 0.64);
+    --fontcolor:rgb(245, 244, 242);
+    --gameback:rgba(246, 161, 3, 0.804);
+    --gametext:rgb(215, 248, 212);
+}
+
+* {
+    font-family: Helvetica, sans-serif, Arial;
+}
+
+body,html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif, Arial;
+    background-color: var(--backdrop);
+    color: var(--fontcolor);
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.quiz, .scores {
+    margin: 100px auto 0 auto;
+    max-width: 400px;
+}
+
+p {
+    margin: 15px 15px;
+}
+
+/**/
+
+.landing {
+    text-align: center;
+}
+
+.scoresHeader {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.timer {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+button {
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--gameback);
+    border-radius: 5px;
+    border: 0;
+    padding: 20px;
+}
+
+button:hover {
+    background-color: #9e99a1;
+}
+
+.options button {
+    display: block;
+}
+
+input[type="text"] {
+    font-size: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.feedback {
+    font-style: bold;
+    font-size: 120%;
+    margin-top: 20px;
+    padding-top: 15px;
+    color: #fff;
+    border-top: 2px solid var(--gameback);
+}
+
+ol {
+    padding-left: 15px;
+    max-height: 600px;
+    overflow: auto;
+}
+  
+  li {
+    padding: 5px;
+    list-style: decimal inside none;
+}
+  
+  li:nth-child(odd) {
+    background-color: #dfdae7;
+}
+
+/* This will be applied on any screen smaller than 768px */
+@media screen and (max-width: 768px) {
+
+}
+
+/* This will be applied on any screen smaller than 575px */
+@media screen and  (max-width: 575px) {
+
+}
