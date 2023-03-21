@@ -4,6 +4,8 @@ Make a timed quiz that saves your quiz answer results. For incorrectly given ans
 ## Description
 Once the quiz has started a timer will start counting down. Presented infront of the user will be a series of questions referring to JavaScript fundamentals. When the user gets an answer correct they will be presented with a correct answer indicator and an audible noise will play. If the user gets an answer incorrect the timer will drop 10 seconds off of their time as well as play a different audible nose with a worng answer message shown. The game will end when the user has answered all of the questions or the timer has run out. The user will then be presented with their score as well as previous high-scores.
 
+Wesbite live at: <href="">
+
 ## Badges
 N/A
 ## Visuals
@@ -16,29 +18,23 @@ Once the user has answered all of the questions or the timer has gotten to zero 
 <img src="./assets/EndQuizImage.jpeg">
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+Made using the latest versions of GitHub and Visual Studio Code.
 
 ## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+When the user clicks the start quiz button they will be shown a series of questions relating to JavaScript. The user will select their choice and if incorrec the time will be deducted ten seconds. Once the game has ended the user can input their score to a local leaderboard.
 
 ## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+For support email: jkrieger11@gmail.com.
 
 ## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+Application in process, updates coming daily for next few weeks. 3/20/23.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
 
 ## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
+Jake Krieger
+[GitHub](https://github.com/jkrieger6?tab=repositories "GitHub Home")
 ## License
-For open source projects, say how it is licensed.
+N/A
 
 ## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+Currently in progress.

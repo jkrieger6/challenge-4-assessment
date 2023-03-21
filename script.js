@@ -60,6 +60,7 @@ function quizStart() {
     getQuestion();
 }
 
+
 // Loop through array of prompts and options and create list with buttons
 function getQuestion() {
     if (questionsCounter >= questions.length) return renderResults();
@@ -73,8 +74,7 @@ function getQuestion() {
         btn.innerText = questions.answers[i];
         btn.className = "hoverable-button answer-choice";
         btn.onclick = captureAnswer;
-        document.getElementById("options").appendChild(btn);
-        
+        document.getElementById("options").appendChild(btn); 
     }
 }
 
@@ -186,37 +186,9 @@ function printHighscores() {
 printHighscores();
 
 
-// Old code
-//start quiz
-startBtn.addEventListener('click' , startTimer)
 
-function startQuiz() {
-    var currentprompt = questions[0];
-    questionsEl.textContent = currentprompt.prompt;
-    var promptoptionsKeys = Object.keys(currentprompt.options);
-    console.log(promptoptionsKeys);
-    for (let i = 0; i < promptoptionsKeys.length; i++) {
-        var answerKey = promptoptionsKeys[i];
-        console.log(answerKey);
-        var currentAnswer = currentprompt.options[answerKey];
-        console.log(currentAnswer);
-        answerChoicesContainer.append(currentAnswer);
-    }
-}
-startBtn.addEventListener('click' , showprompt);
 
-// Old code
-//     var currentQuestion = questions[currentQuestionIndex];
-//   var promptEl = document.querySelector("question-words");
-//     promptEl.textContent = currentQuestion.prompt;
-//     choicesEl.innerHTML = "";
-//     currentQuestion.options.forEach(function(choice, i) {
-//         var choiceBtn = document.createElement("button");
-//         choiceBtn.setAttribute("value", choice);
-//         choiceBtn.textContent = i + 1 + "." + choice;
-//         choiceBtn.onclick = questionClick;
-//         choicesEl.appendChild(choiceBtn);
-//     });
+
 
 
                     
