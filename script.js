@@ -18,7 +18,7 @@ var questions = [
     {
         prompt: "What is the syntax for creating a function in JavaScript?",
         options: ["function = myFunction()", "function myFunction()", "myFunction() = function"],
-        answer: "function myFunction()"
+        answer: "function = myFunction()"
       },
     {
         prompt: "What is the output of the following code: console.log(typeof 42);",
@@ -64,9 +64,9 @@ function quizStart() {
 function getQuestion() {
     if (questionsCounter >= questions.length) return renderResults();
     let qAndA = document.getElementById("question-words", "options");
-    // document.getElementById("questions").innerText = "";
-    // document.getElementById("question-words").innerText = questions.text;
-    // document.getElementById("options").innerHTML = "";
+    document.getElementById("questions").innerText = "";
+    document.getElementById("question-words").innerText = questions.text;
+    document.getElementById("options").innerHTML = "";
     for (let i = 0; i < questions.options.length; i++) {
         let btn = document.createElement("button");
         btn.className = "options-choice";
@@ -76,17 +76,6 @@ function getQuestion() {
         document.getElementById("options").appendChild(btn);
         
     }
-    //     var currentQuestion = questions[currentQuestionIndex];
-//   var promptEl = document.querySelector("question-words");
-//     promptEl.textContent = currentQuestion.prompt;
-//     choicesEl.innerHTML = "";
-//     currentQuestion.options.forEach(function(choice, i) {
-//         var choiceBtn = document.createElement("button");
-//         choiceBtn.setAttribute("value", choice);
-//         choiceBtn.textContent = i + 1 + "." + choice;
-//         choiceBtn.onclick = questionClick;
-//         choicesEl.appendChild(choiceBtn);
-//     });
 }
 
 // Check for right options and deduct time for wrong answer, go to next prompt
@@ -215,6 +204,19 @@ function startQuiz() {
     }
 }
 startBtn.addEventListener('click' , showprompt);
+
+// Old code
+//     var currentQuestion = questions[currentQuestionIndex];
+//   var promptEl = document.querySelector("question-words");
+//     promptEl.textContent = currentQuestion.prompt;
+//     choicesEl.innerHTML = "";
+//     currentQuestion.options.forEach(function(choice, i) {
+//         var choiceBtn = document.createElement("button");
+//         choiceBtn.setAttribute("value", choice);
+//         choiceBtn.textContent = i + 1 + "." + choice;
+//         choiceBtn.onclick = questionClick;
+//         choicesEl.appendChild(choiceBtn);
+//     });
 
 
                     
