@@ -81,7 +81,6 @@ function quizStart() {
 }
 
 // Loop through array of prompts and options and create list with buttons
-
 function getQuestion() {
     if (questionCounter >= questions.length) return renderResults();
     document.getElementById("question-words").innerText = "";
