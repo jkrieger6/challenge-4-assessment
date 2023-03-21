@@ -4,7 +4,7 @@ Make a timed quiz that saves your quiz answer results. For incorrectly given ans
 ## Description
 Once the quiz has started a timer will start counting down. Presented infront of the user will be a series of questions referring to JavaScript fundamentals. When the user gets an answer correct they will be presented with a correct answer indicator and an audible noise will play. If the user gets an answer incorrect the timer will drop 10 seconds off of their time as well as play a different audible nose with a worng answer message shown. The game will end when the user has answered all of the questions or the timer has run out. The user will then be presented with their score as well as previous high-scores.
 
-Wesbite live at: <href="">
+Wesbite live at: https://jkrieger6.github.io/challenge-4-assessment/
 
 ## Badges
 N/A
