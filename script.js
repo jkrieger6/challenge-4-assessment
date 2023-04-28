@@ -13,7 +13,7 @@ var questions = [
     {
         prompt: "What does 'DOM' stand for?",
         options: ["Document Object Model", "Database Object Management", "Data Organization Module"],
-        answer: "Docmuent Object Model"
+        answer: "Document Object Model"
       },
     {
         prompt: "What is the syntax for creating a function in JavaScript?",
@@ -21,19 +21,19 @@ var questions = [
         answer: "function = myFunction()"
       },
     {
-        prompt: "What is the output of the following code: console.log(typeof 42);",
+        prompt: "What is the output of the following code: console.log(typeof(42));",
         options: ["undefined", "number", "string"],
         answer: "number"
       },
     {
         prompt: "Which of the following data types are supported by JavaScript?",
-        options: ["Boolean", "String", "Number", "All of the above"],
+        options: ["Boolean", "String", "Numbers", "All of the above"],
         answer: "All of the above"
       },
     {
         prompt: "An array is seperated by what?",
-        options: ["-", ",", ".", "/"],
-        answer: "."
+        options: ["Hyphen ' - '","Comma ' , '","Period ' . '","Slash ' / '"],
+        answer: "Period ' . '"
       },
     {
         prompt: "A global variable is accesible throughtout the entire document.",
@@ -109,9 +109,9 @@ function questionClick() {
 
 function quizEnd() {
     clearInterval(timerId);
-    var endScreenEl = document.getElementById("quiz-end");
+    var endScreenEl = document.getElementById("Quiz-Ended");
     endScreenEl.removeAttribute("class");
-    var finalScoreEl = document.getElementById("score-final");
+    var finalScoreEl = document.getElementById("Total Points");
     finalScoreEl.textContent = time;
     questionsEl.setAttribute("class", "hide");
 }
