@@ -1,11 +1,11 @@
 // DOM elements
-var questionsEl = document.getElementById("questions");
-var timerEl = document.getElementById("timer");
-var choicesEl = document.getElementById("options");
+var questionsElement = document.getElementById("questions");
+var timerElement = document.getElementById("timer");
+var choicesElement = document.getElementById("options");
 var submitBtn = document.getElementById("submit-score");
 var startBtn = document.getElementById("start");
-var nameEl = document.getElementById("name");
-var feedbackEl = document.getElementById("feedback");
+var nameElement = document.getElementById("name");
+var feedbackElement = document.getElementById("feedback");
 var reStartBtn = document.getElementById("restart");
 
 // List of prompts and options
@@ -13,7 +13,7 @@ var questions = [
     {
         prompt: "What does 'DOM' stand for?",
         options: ["Document Object Model", "Database Object Management", "Data Organization Module"],
-        answer: "Docmuent Object Model"
+        answer: "Document Object Model"
       },
     {
         prompt: "What is the syntax for creating a function in JavaScript?",
@@ -21,19 +21,19 @@ var questions = [
         answer: "function = myFunction()"
       },
     {
-        prompt: "What is the output of the following code: console.log(typeof 42);",
+        prompt: "What is the output of the following code: console.log(typeof(42));",
         options: ["undefined", "number", "string"],
         answer: "number"
       },
     {
         prompt: "Which of the following data types are supported by JavaScript?",
-        options: ["Boolean", "String", "Number", "All of the above"],
+        options: ["Boolean", "String", "Numbers", "All of the above"],
         answer: "All of the above"
       },
     {
         prompt: "An array is seperated by what?",
-        options: ["-", ",", ".", "/"],
-        answer: "."
+        options: ["Hyphen ' - '","Comma ' , '","Period ' . '","Slash ' / '"],
+        answer: "Period ' . '"
       },
     {
         prompt: "A global variable is accesible throughtout the entire document.",
@@ -53,10 +53,10 @@ let score;
 // Start quiz and hide frontpage
 function quizStart() {
     timerId = setInterval(clockTick, 1000);
-    timerEl.textContent = time;
-    var landingScreenEl = document.getElementById("start-screen");
-    landingScreenEl.setAttribute("class", "hide");
-    questionsEl.removeAttribute("class");
+    timerElement.textContent = time;
+    var landingScreenElement = document.getElementById("start-screen");
+    landingScreenElement.setAttribute("class", "hide");
+    questionsElement.removeAttribute("class");
     getQuestion();
 }
 
@@ -86,16 +86,16 @@ function questionClick() {
       if (time < 0) {
         time = 0;
       }
-      timerEl.textContent = time;
-      feedbackEl.textContent = `Wrong! The correct answer was ${prompts[currentpromptIndex].answer}.`;
-      feedbackEl.style.color = "red";
+      timerElement.textContent = time;
+      feedbackElement.textContent = `Wrong! The correct answer was ${prompts[currentpromptIndex].answer}.`;
+      feedbackElement.style.color = "red";
     } else {
-      feedbackEl.textContent = "Correct!";
-      feedbackEl.style.color = "green";
+      feedbackElement.textContent = "Correct!";
+      feedbackElement.style.color = "green";
     }
-    feedbackEl.setAttribute("class", "feedback");
+    feedbackElement.setAttribute("class", "feedback");
     setTimeout(function() {
-      feedbackEl.setAttribute("class", "feedback hide");
+      feedbackElement.setAttribute("class", "feedback hide");
     }, 2000);
     currentQuestionIndex++;
     if (currenQuestionIndex === questions.length) {
@@ -109,18 +109,18 @@ function questionClick() {
 
 function quizEnd() {
     clearInterval(timerId);
-    var endScreenEl = document.getElementById("quiz-end");
-    endScreenEl.removeAttribute("class");
-    var finalScoreEl = document.getElementById("score-final");
-    finalScoreEl.textContent = time;
-    questionsEl.setAttribute("class", "hide");
+    var endScreenElement = document.getElementById("Quiz-Ended");
+    endScreenElement.removeAttribute("class");
+    var finalScoreElement = document.getElementById("Total Points");
+    finalScoreElement.textContent = time;
+    questionsElement.setAttribute("class", "hide");
 }
 
 // End quiz if timer reaches 0
 
 function clockTick() {
     time--;
-    timerEl.textContent = time;
+    timerElement.textContent = time;
     if (time <= 0) {
       quizEnd();
     }
@@ -129,7 +129,7 @@ function clockTick() {
 // Save score in local storage along with users' name
 
 function saveHighscore() {
-    var name = nameEl.value.trim();
+    var name = nameElement.value.trim();
     if (name !== "") {
       var highscores =
         JSON.parse(window.localStorage.getItem("highscores")) || [];
@@ -149,7 +149,7 @@ function checkForEnter(event) {
         saveHighscore();
     }
 }
-nameEl.onkeydown = checkForEnter;
+nameElement.onkeydown = checkForEnter;
 
 // Save users' score after clicking submit
 
@@ -172,8 +172,8 @@ function printHighscores() {
     highscores.forEach(function(score) {
       var liTag = document.createElement("li");
       liTag.textContent = score.name + " - " + score.score;
-      var olEl = document.getElementById("highscores");
-      olEl.appendChild(liTag);
+      var olElement = document.getElementById("highscores");
+      olElement.appendChild(liTag);
     });
 }
 
